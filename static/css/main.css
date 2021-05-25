@@ -13,13 +13,15 @@ nav{
   margin-left: 5px;
 }
 .box-element{
-  box-shadow: hsl(0, 4%, 44%) 0 0 26px;
+  box-shadow: hsl(0, 7%, 62%) 0 0 26px;
   background-color: #fff;
   border-radius: 4px;
   padding: 10px;
 }
 .product{
   border-radius: 0, 0, 4px,4px;
+  padding: 20px;
+  margin-bottom: 10px;
 }
 .thumbnail{
   width: 100%;

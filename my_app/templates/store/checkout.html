@@ -54,16 +54,18 @@
               <hr>
               <table class="table">
                 <tbody>
+                {% for item in items %}
                   <tr>
-                    <th scope="row"><img class="prod-image" src="{%static 'images/placeholder.png'%}" alt=""></th>
-                    <td>Product 1</td>
-                    <td>@ $45</td>
-                    <td>x2</td>
+                    <th scope="row"><img class="prod-image" src="{{item.product.imageURL}}" alt=""></th>
+                    <td>{{item.product.name}}</td>
+                    <td>@ $ {{item.product.price|floatformat:2}}</td>
+                    <td>{{item.quantity}}</td>
                   </tr>
+                {% endfor %}  
                   <tr>
                     <td>
-                      <h5>Items: 2</h5>
-                      <h5>Total: $90</h5>
+                      <h5>Items: {{order.get_cart_items}}</h5>
+                      <h5>Total: $ {{order.get_cart_total|floatformat:2}}</h5>
                     </td>
                   
                   </tr>
